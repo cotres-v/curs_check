@@ -1,0 +1,266 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-family: 'Lato'; 
+}
+div {
+    display: block;
+}
+.container {
+    height: 100%;
+}
+.main {
+    height: 100%;
+    margin-left: 240px;
+    background: url(images/taxi-fon.jpg) no-repeat 20%;
+}
+.phone {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 16px #ccc;
+    height: 100px;
+    width: 350px;
+    display: block;
+    position: relative;
+    top: 100px;
+    margin-left: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+.phone h1 {
+    font-size: 20px;
+    color: black;
+}
+.phone span {
+    font-size: 30px;
+    color: black; 
+}
+.form { /*Тут начинается настройка формы*/
+    display: block;
+    height: 72%;
+    width: 500px;
+    margin-top: 150px;
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.form_order {  /*Класс самой формы*/
+    width: 80%;
+    font-family: sans-serif; 
+    letter-spacing: 1px;
+    padding-top: 15px;
+}
+.form_grup {  /*Класс дивов каждого элемента формы*/
+    position: relative;
+    margin-bottom: 15px; /* Внешний отступ дивов */
+    font-family: 'Lato'
+}
+.form_button { 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    color : black ; 
+    outline: none; 
+    transition: 0.3s;
+    font-family: 'Lato';
+    border: 1px solid #000000;
+    font-size: 17px;
+    margin: 0px 5px;
+    background-color: transparent;
+}
+.form_button:hover {
+    transform: scale(1.1);
+    background-color: rgb(0, 234, 144, 0.85);
+}
+.form_input {  /*Класс для input*/
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 2px solid #000000; /* нижняя рамка */
+    background-color: transparent; /* Прозрачный фон */
+    outline: none; /* внешняя граница элемента */
+    transition: 0.3s; /* плавный переход */
+    font-family: 'Lato';
+}
+input::placeholder {  /*Цвет подсказок*/
+    color: rgb(0, 0, 0);
+}
+input[type=text], input[type=tel] {  /*Цвет шрифта при вводе*/
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+.form_order span { /* Жирные подсказки */
+    font-weight: bold; 
+}
+.form_radio {  /*выстраивание дивов*/
+	display: inline-block;
+    font-family: 'Lato';
+    font-size: 17px;
+}
+.form_radio input[type=radio] {  /*без отображения кружочков*/
+	display: none;
+}
+.form_radio label {  /*для надписей селекта*/
+	display: inline-block;
+	padding: 0px 20px;
+	line-height: 35px;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px;
+    margin: 5px 0px;
+}
+.form_radio input[type=radio]:checked + label {  /*при выборе радио будет такой фон*/
+	background: rgb(0, 234, 144, 0.85);
+}
+.form_radio label:hover {  /*при наведении будет такой шрифт*/
+	color: #012b1b;
+    transform: scale(1.05);
+    background-color: rgb(0, 234, 144, 0.85);
+    transition: 0.3s;
+}
+.form_radio input[type=radio]:disabled + label {  /*Если на наводить курсор будет так*/
+	background: #000000;
+	color: rgb(0, 0, 0);
+}
+.form_select {  /*Рамочки и тд для селекта*/
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    appearance: none;
+    font-family: "Lato";
+    font-size: 17px;
+}
+.form_select:hover { 
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.form_datetime {  /*Класс для выбора даты*/
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+.form_datetime:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.sidebar {
+    width: 240px;
+    height: 100%;
+    float: left;
+    background-color: #2a3549;
+}
+.logo {
+    display: block;
+    height: 150px;
+    background: url(images/taxi.jpg) no-repeat 50%;
+    background-size: 100px;
+}
+.button {  /* Кнопки в меню - начало */
+    color: white;
+    text-decoration: none;
+    position: relative; 
+    padding: 35px 50px;
+    display: block;
+    transition: .3s;
+    font-size: 25px;
+}
+.button:before { /* Добавление полупрозрачного кружочка */
+    content:"";
+    position: absolute;
+    top: 25px;
+    left: 25;
+    display: block;
+    border-radius: 30px;
+    background: rgba(11, 219, 146, 0.4);
+    width: 50px;
+    height: 50px;
+    transition: .3s;    
+}
+.button span {
+    position: relative;
+    font-weight: 250;
+    letter-spacing: .10rem;
+    text-transform: uppercase; /* Текст будет виден при наведении */
+}
+.button:hover {
+    color: black;
+    transform: translateX(10px); /* Текст чуть двинется при наведении */
+}
+.button:hover:before {
+    width: 200px; /* Длина зеленой линии */
+    background:rgb(0, 234, 144);
+} /* Кнопки в меню - конец */
+.publicity {
+    padding-top: 10%;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.publicity span {
+    color: white;
+    font-size: 15px;
+}
+.publicity a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Конец первой страницы */
+.main_price {
+    height: 100%;
+    margin-left: 240px;
+    background: url(images/taxi-fon2.jpg) no-repeat 20%;
+}
+.tariff_block {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 600px;
+    height: 420px;
+    margin-left: 150px;
+    margin-top: 30px;
+    float: left;
+    font-family: 'Lato';
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.tariff_text {
+    height: 50%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+.tariff_text span {
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+}
+.economy_logo {
+    background: url(images/eco.png) no-repeat 50%;
+    height: 50%;
+    width: 100%;
+}
+.comfort_logo {
+    background: url(images/com.png) no-repeat 50%;
+    height: 50%;
+    width: 100%;
+}
+.business_logo {
+    background: url(images/bis.png) no-repeat 50%;
+    height: 50%;
+    width: 100%;
+}
+.minivan_logo {
+    background: url(images/van.png) no-repeat 50%;
+    height: 50%;
+    width: 100%;
+}

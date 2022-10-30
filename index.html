@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title> TAXI </title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "sidebar">
+                <div class = "logo"></div>        
+                    <a href="index.html" class = "button"> <span> Заказ </span> </a> 
+                    <a href="price.html" class = "button"> <span> Цены </span> </a> 
+                    <a href="contacts.html" class = "button"> <span> Контакты </span> </a> 
+                    <a href="discounts.html" class = "button"> <span> Скидки </span> </a>
+                <div class = "publicity"> 
+                    <span> 
+                        © 2020–2022 Сервис «TAXI». 
+                        <a href="#" onclick="alert('Правовая информация будет после запуска')">Правовая информация</a> 
+                    </span> 
+                </div> 
+            </div>
+            <div class = "main">
+                <div class = "phone"> 
+                    <h1> Закажи такси онлайн или по телефону </h1>
+                    <span> (495) 505-55-55 </span>
+                </div>
+                <div class = "form"> 
+                    <form action="#" name="order" class="form_order">
+                        <div class="form_grup"> 
+                            <input class="form_input" type="text" placeholder="Ваше имя" required> 
+                        </div>
+                        <div class="form_grup"> 
+                            <input class="form_input" type="tel" placeholder="Номер телефона" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" required> 
+                        </div>
+                        <div class="form_grup"> 
+                            <input class="form_input" type="text" placeholder="Откуда" required>
+                        </div class="form_grup">
+                        <div class="form_grup"> 
+                            <input class="form_input" type="text" placeholder="Подъезд или место встречи" required>
+                        </div>
+                        <div class="form_grup"> 
+                            <input class="form_input" type="text" placeholder="Куда" required>
+                        </div>
+                        <div class="form_grup"> 
+                            <span> Время поездки: </span> <input class="form_datetime" type="datetime-local" required>  
+                        </div>
+                        <div class="form_grup"> 
+                            <span> Выбор оплаты: </span>
+                            <select class="form_select" id="pay" name="ridepay">
+                                <option value="cash">Наличными</option>
+                                <option value="card">Банковской картой</option>
+                                <option value="transfer">Переводом</option>
+                            </select> 
+                        </div>
+                        <div class="form_grup">  
+                            <span> Выбор тарифа: </span>
+                            <div class="form_radio"><input type="radio" id="Economy" value="Economy" name="ride_tariff" checked> <label for="Economy"> Эконом </label> </div>
+                            <div class="form_radio"><input type="radio" id="Comfort" value="Comfort" name="ride_tariff"> <label for="Comfort"> Комфорт </label> </div>
+                            <div class="form_radio"><input type="radio" id="Business" value="Business" name="ride_tariff"> <label for="Business"> Бизнес </label> </div>
+                            <div class="form_radio"><input type="radio" id="Minivan" value="Minivan" name="ride_tariff"> <label for="Minivan"> Минивэн 6 мест </label> </div>
+                        </div>
+                        <div class="form_grup"> 
+                            <span> Пожелания к заказу: </span>
+                            <div> <input type="checkbox" id="babychair" value="babychair" name="wishes"> Детское кресло </div>
+                            <div> <input type="checkbox" id="smoke" value="smoke" name="wishes"> Курящий салон </div> 
+                            <div> <input type="checkbox" id="animal" value="animal" name="wishes"> Перевозка животного </div>
+                            <div> <input type="checkbox" id="largeluggage" value="largeluggage" name="wishes"> Крупный багаж в салон </div>
+                        </div>
+                        <div class="form_grup"> 
+                            <input class="form_input" type="text" placeholder = "Комментарий">
+                        </div>
+                        <button type="submit" class="form_button" value="sendorder"> Сделать заказ </button> 
+                        <button type="reset" class="form_button"> Отмена </button>
+                    </form>
+                </div>
+        </div>
+    </body>
+</html>
